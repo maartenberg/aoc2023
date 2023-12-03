@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 indoc = "2.0.4"
 aho-corasick = "1.1.2"
+nom = "7"

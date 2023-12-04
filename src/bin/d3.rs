@@ -33,10 +33,9 @@ fn solve(input: &str) -> u32 {
                 None => match number_start {
                     None => {}
                     Some(xs) => {
-                        'outer: for u in (xs.saturating_sub(1))..=x.saturating_add(1) {
+                        'outer: for u in (xs.saturating_sub(1))..=x {
                             for v in y.saturating_sub(1)..=y.saturating_add(1) {
                                 if symbols.contains(&(u, v)) {
-                                    dbg!(number);
                                     result += number;
                                     break 'outer;
                                 }
@@ -59,10 +58,9 @@ fn solve(input: &str) -> u32 {
 
         if let Some(xs) = number_start {
             let x = line.chars().count();
-            'outer: for u in (xs.saturating_sub(1))..=x.saturating_add(1) {
+            'outer: for u in (xs.saturating_sub(1))..=x {
                 for v in y.saturating_sub(1)..=y.saturating_add(1) {
                     if symbols.contains(&(u, v)) {
-                        dbg!(number);
                         result += number;
                         break 'outer;
                     }

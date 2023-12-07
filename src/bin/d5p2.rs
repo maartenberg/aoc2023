@@ -68,7 +68,7 @@ fn parse_map(input: &str) -> IResult<&str, TranslationMap> {
 fn solve(input: &str) -> u64 {
     let (_, (seeds, maps)) = parse(input).unwrap();
 
-    let mut values = Vec::from(seeds);
+    let mut values = seeds;
 
     for map in maps {
         for v in values.iter_mut() {

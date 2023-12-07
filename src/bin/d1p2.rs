@@ -28,10 +28,10 @@ fn solve(input: String) -> u64 {
         let first = first_match.pattern().as_u64() % 10;
         let last = matches.last().unwrap_or(first_match).pattern().as_u64() % 10;
 
-        sum += (10 * first + last) as u64;
+        sum += 10 * first + last;
     }
 
-    return sum;
+    sum
 }
 
 #[cfg(test)]

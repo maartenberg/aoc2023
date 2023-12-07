@@ -15,7 +15,7 @@ fn solve(input: String) -> u64 {
     let mut sum: u64 = 0;
 
     for line in input.lines() {
-        let mut digits = line.chars().filter(|c| c.is_digit(10));
+        let mut digits = line.chars().filter(|c| c.is_ascii_digit());
 
         let first = digits.next().map(|c| c.to_digit(10).unwrap()).unwrap();
         let last = digits
@@ -26,7 +26,7 @@ fn solve(input: String) -> u64 {
         sum += (10 * first + last) as u64;
     }
 
-    return sum;
+    sum
 }
 
 #[cfg(test)]

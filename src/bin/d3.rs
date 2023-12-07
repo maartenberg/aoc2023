@@ -18,7 +18,7 @@ fn solve(input: &str) -> u32 {
 
     for (y, line) in input.lines().enumerate() {
         for (x, c) in line.char_indices() {
-            if !c.is_digit(10) && c != '.' {
+            if !c.is_ascii_digit() && c != '.' {
                 symbols.insert((x, y));
             }
         }

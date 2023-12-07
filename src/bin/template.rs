@@ -11,7 +11,7 @@ fn main() {
     println!("{result}");
 }
 
-fn solve(input: &str) -> u64 {
+fn solve(_input: &str) -> u64 {
     todo!()
 }
 

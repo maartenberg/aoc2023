@@ -36,7 +36,7 @@ impl Race {
 
         dbg!((t, d, min, first, last, result));
 
-        result as u128
+        result
     }
 }
 
